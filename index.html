@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>新温泉町役場 打刻</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="役場打刻">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#1565c0">
+
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>新温泉町役場 打刻</h1>
+
+  <select id="name">
+    <option value="">氏名を選択してください</option>
+  </select>
+
+  <button id="punchIn" class="btn-in">出勤</button>
+  <button id="punchOut" class="btn-out">退勤</button>
+
+  <label class="field-check">
+    <input type="checkbox" id="fieldWork">
+    本日は現場直行・現場直帰です(位置情報の確認をしません)
+  </label>
+
+  <div id="status"></div>
+
+  <div id="locGuide"></div>
+
+  <p class="note">
+    ボタンを押した瞬間だけ位置情報を送信し、庁舎内かどうかの判定に使用します。<br>
+    位置情報の常時取得・追跡は行いません。
+  </p>
+
+  <script src="app.js"></script>
+</body>
+</html>
